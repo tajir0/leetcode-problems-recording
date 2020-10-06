@@ -1,5 +1,5 @@
 # leetcode-problems-recording
-classfication of typical problems solved
+Catergorization of typical problems 
 
 My leetcode account is [tajiro](https://leetcode-cn.com/u/tajiro/)
 ## 动态规划
@@ -10,3 +10,7 @@ My leetcode account is [tajiro](https://leetcode-cn.com/u/tajiro/)
 ### 匹配
 1. [44. 通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)
 2. [剑指 Offer 19. 正则表达式匹配](https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/)
+
+## 回溯
+### 数组元素之和
+1.[18. 四数之和](https://leetcode-cn.com/problems/4sum/)
