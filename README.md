@@ -1,7 +1,6 @@
 # leetcode-problems-recording
 Catergorization of typical problems 
 
-My leetcode account is [tajiro](https://leetcode-cn.com/u/tajiro/)
 ## 动态规划
 ### 词典
 1. [面试题 17.13. 恢复空格](https://leetcode-cn.com/problems/re-space-lcci/)
@@ -14,3 +13,9 @@ My leetcode account is [tajiro](https://leetcode-cn.com/u/tajiro/)
 ## 回溯
 ### 数组元素之和
 1.[18. 四数之和](https://leetcode-cn.com/problems/4sum/)
+
+## 贪心
+### 区间问题
+1. 435
+2. 452
+3. 1024
