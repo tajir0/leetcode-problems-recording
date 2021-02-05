@@ -19,3 +19,13 @@ Catergorization of typical problems
 1. 435
 2. 452
 3. 1024
+
+## 单调栈
+单调栈的用途：找到左/右方向上第一个比下标为栈顶的元素小/大的下标
+单调栈的特点：栈尾总是最大/小的元素的下标（常用双向队列实现)。栈顶是左方向上第一个比正在遍历的元素小/大的元素的下标。
+1. [84. 柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/)
+遍历一次用一个栈就能找到左右两个方向第一个比某下标元素小/大的元素下标。
+2. [239. 滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/)
+栈尾总是最大/小的元素的下标（常用双向队列实现)。
+3. [739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
+
