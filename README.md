@@ -3,7 +3,7 @@ Catergorization of typical problems
 
 ## 双指针
 ### 滑动窗口
-'''cpp
+···cpp
 vector<int> map(128,0);
 int i =  0, j = 0 len = 0; //len和题目要求的结果相关
 while (j < s.size()) {
@@ -16,7 +16,7 @@ while (j < s.size()) {
     j++; //窗口扩大                 
 }
 return len;
-'''  
+···  
 1. 76
 2. 3/剑指offer48
  
