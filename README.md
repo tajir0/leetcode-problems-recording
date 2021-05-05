@@ -1,6 +1,25 @@
 # leetcode-problems-recording
 Catergorization of typical problems 
 
+## 双指针
+### 滑动窗口
+'''cpp
+vector<int> map(128,0);
+int i =  0, j = 0 len = 0; //len和题目要求的结果相关
+while (j < s.size()) {
+    m[s[j]]++; //先更新表
+    while (需要窗口缩小的条件发送时）{
+        m[s[i]]--;
+        i++;
+        ... //和更新结果相关的操作
+    }
+    j++; //窗口扩大                 
+}
+return len;
+'''  
+1. 76
+2. 3/剑指offer48
+ 
 ## 动态规划
 ### 词典
 1. [面试题 17.13. 恢复空格](https://leetcode-cn.com/problems/re-space-lcci/)
