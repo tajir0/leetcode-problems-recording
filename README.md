@@ -1,7 +1,8 @@
 # leetcode-problems-recording
 Catergorization of solved problems  
 
-Account: tajiro
+Account: tajiro  
+
 ## 双指针
 ### 滑动窗口
 ```cpp
