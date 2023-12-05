@@ -110,5 +110,12 @@ int r = recursion(root→right)
 
 [207. 课程表](https://leetcode.cn/problems/course-schedule/?envType=study-plan-v2&envId=top-100-liked)
 
-关于表示已访问节点的visited数组，如果node可以变色（改变值），可以用变色节省数组的开销
+另外，关于表示已访问节点的visited数组，如果node可以变色（改变值），可以用变色节省数组的开销  
+
+这道题为用dfs来计算总路径开销提供了新的思路：从每条边上的开销来思考 
+
+[2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/description/?envType=daily-question&envId=2023-12-05)
+
+
+
 
