@@ -99,7 +99,11 @@ int r = recursion(root→right)
 
 ****[1273. 删除树节点](https://leetcode.cn/problems/delete-tree-nodes/)****
 
-求出树的edges数组（index为parent，值为childs），再dfs
+求出树的edges数组（index为parent，值为childs），再dfs 
+
+树形dp 
+
+****[2646. 最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/)****
 
 ## 图
 权重图用二维矩阵，index i 和 j 表示两个node， 值表示两个两个node的权重
