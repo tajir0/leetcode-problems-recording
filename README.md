@@ -118,7 +118,11 @@ int r = recursion(root→right)
 
 这道题为用dfs来计算总路径开销提供了新的思路：从每条边上的开销来思考 
 
-[2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/description/?envType=daily-question&envId=2023-12-05)
+[2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital/description/?envType=daily-question&envId=2023-12-05)。
+
+有向图用邻接表vector<vector<pair<int, bool>>>，index i 表示node，对应的矩阵存放node的邻接节点和方向
+
+[1466. 重新规划路线](https://leetcode.cn/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 
 
 
