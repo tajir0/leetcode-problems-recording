@@ -194,6 +194,34 @@ int main() {
     return 0;
 }
 ```
+Dijkstra 用于带权图，寻找最短路径，使用优先队列根据当前最短距离选择节点。
+
+BFS 通常用于无权图，寻找最短路径，使用普通队列按层顺序遍历。
+
+```cpp
+void BFS(int start, vector<vector<int>>& graph) {
+    queue<int> q;
+    vector<bool> visited(graph.size(), false);
+    
+    q.push(start);                // 将起点加入队列
+    visited[start] = true;        // 标记起点为已访问
+    
+    while (!q.empty()) {
+        int node = q.front();     // 取出队列头部的节点
+        q.pop();
+        
+        // 处理节点 node
+        
+        for (int neighbor : graph[node]) {   // 遍历邻居
+            if (!visited[neighbor]) {        // 如果邻居未访问
+                q.push(neighbor);            // 加入队列
+                visited[neighbor] = true;    // 标记为已访问
+            }
+        }
+    }
+}
+
+```
 [127.单词接龙](https://leetcode.cn/problems/word-ladder/description/?envType=study-plan-v2&envId=top-interview-150)
 
 
