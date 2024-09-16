@@ -125,5 +125,75 @@ int r = recursion(root→right)
 [1466. 重新规划路线](https://leetcode.cn/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 
 
+要用 queue 实现 Dijkstra 算法，可以采用 优先队列（Priority Queue，也称为最小堆）来维护未处理的节点。下面是基本步骤：
+
+初始化：将起始节点的距离设为 0，其余节点设为无穷大。创建一个优先队列，用于存储节点及其当前距离。
+
+处理队列：每次从队列中取出距离最小的节点，更新该节点的邻居节点的距离。
+
+更新邻居节点：如果发现通过当前节点能到达某个邻居节点的距离更短，则更新该节点的最短距离，并将其重新放入队列。
+
+重复操作：直到队列为空。
+
+在优先队列中，节点按距离排序，从而确保总是处理距离最小的节点。这样，Dijkstra 算法能在 O((V + E) log V) 的时间复杂度下运行。
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <unordered_map>
+#include <climits>
+
+using namespace std;
+
+// 优先队列中的元素 (distance, node)
+typedef pair<int, int> PII;
+
+void dijkstra(int start, vector<vector<PII>>& graph, vector<int>& dist) {
+    priority_queue<PII, vector<PII>, greater<PII>> pq;  // 最小堆
+    pq.push({0, start});  // 起点，距离为0
+    dist[start] = 0;
+
+    while (!pq.empty()) {
+        auto [currentDist, u] = pq.top();  // 当前距离最近的节点
+        pq.pop();
+
+        if (currentDist > dist[u]) continue;  // 若当前距离已经不是最短，跳过
+
+        // 遍历邻居
+        for (auto [v, weight] : graph[u]) {
+            int newDist = currentDist + weight;
+            if (newDist < dist[v]) {  // 找到更短路径
+                dist[v] = newDist;
+                pq.push({newDist, v});
+            }
+        }
+    }
+}
+
+int main() {
+    int n = 5;  // 节点数
+    vector<vector<PII>> graph(n);  // 图的邻接表
+    vector<int> dist(n, INT_MAX);  // 最短距离初始化为无穷大
+
+    // 示例图 (u, v, weight)
+    graph[0].push_back({1, 2});
+    graph[0].push_back({2, 4});
+    graph[1].push_back({2, 1});
+    graph[1].push_back({3, 7});
+    graph[2].push_back({4, 3});
+    graph[3].push_back({4, 1});
+
+    int start = 0;  // 起点
+    dijkstra(start, graph, dist);
+
+    // 输出从起点到其他节点的最短距离
+    for (int i = 0; i < n; ++i) {
+        cout << "Distance from " << start << " to " << i << ": " << dist[i] << endl;
+    }
+
+    return 0;
+}
+```
+[127.单词接龙](https://leetcode.cn/problems/word-ladder/description/?envType=study-plan-v2&envId=top-interview-150)
 
 
