@@ -32,6 +32,20 @@ return len;
 1. [44. 通配符匹配](https://leetcode-cn.com/problems/wildcard-matching/)
 2. [剑指 Offer 19. 正则表达式匹配](https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/)
 
+## 二分
+模版
+```cpp
+	int l = 0, r = nums.size() - 1;
+        while (l < r) {     //条件设置成l < r,这样就不用考虑该返回l还是r了,因为l=r
+            int mid = (l + r) / 2;
+            if (nums[mid] < nums[mid + 1]) { //mid + 1肯定不会越界,具体判断什么根据题目而定
+                l = mid + 1;   //一边是mid + 1， 一边是mid(不能是mid - 1，不然会漏掉nums[mid])
+            }
+            else if (...) {
+                r = mid;
+        }
+        return nums[l];
+```
 ## 回溯
 模版
 ```cpp
